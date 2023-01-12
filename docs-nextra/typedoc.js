@@ -21,6 +21,7 @@ module.exports = {
   tsconfig: "../packages/core/tsconfig.json",
   excludeNotDocumented: true,
   allReflectionsHaveOwnDocument: true,
+  plugin: ['typedoc-plugin-markdown'],
   disableSources: true,
   hideBreadcrumbs: true,
   excludeExternals: true,
