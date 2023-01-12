@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "typedoc": "typedoc",
+    "dev": "npm run typedoc & next dev",
     "start": "next start",
     "build": "next build"
   },
@@ -17,5 +18,9 @@
     "nextra-theme-docs": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.23.22",
+    "typedoc-plugin-markdown": "^3.14.0"
   }
 }

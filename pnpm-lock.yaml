@@ -210,12 +210,17 @@ importers:
       nextra-theme-docs: ^2.2.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      typedoc: ^0.23.22
+      typedoc-plugin-markdown: ^3.14.0
     dependencies:
       next: 13.1.1_biqbaboplfbrettd7655fr4n2y
       nextra: 2.2.1_q76c2b4vyoegvsbrcwkfvimnai
       nextra-theme-docs: 2.2.1_q76c2b4vyoegvsbrcwkfvimnai
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    devDependencies:
+      typedoc: 0.23.22
+      typedoc-plugin-markdown: 3.14.0_typedoc@0.23.22
 
   packages/adapter-dgraph:
     specifiers:
@@ -34054,6 +34059,28 @@ packages:
       typedoc: 0.23.22_typescript@4.9.4
     dev: true
     patched: true
+
+  /typedoc-plugin-markdown/3.14.0_typedoc@0.23.22:
+    resolution: {integrity: sha512-UyQLkLRkfTFhLdhSf3RRpA3nNInGn+k6sll2vRXjflaMNwQAAiB61SYbisNZTg16t4K1dt1bPQMMGLrxS0GZ0Q==}
+    peerDependencies:
+      typedoc: '>=0.23.0'
+    dependencies:
+      handlebars: 4.7.7
+      typedoc: 0.23.22
+    dev: true
+
+  /typedoc/0.23.22:
+    resolution: {integrity: sha512-5sJkjK60xp8A7YpcYniu3+Wf0QcgojEnhzHuCN+CkdpQkKRhOspon/9+sGTkGI8kjVkZs3KHrhltpQyVhRMVfw==}
+    engines: {node: '>= 14.14'}
+    hasBin: true
+    peerDependencies:
+      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x
+    dependencies:
+      lunr: 2.3.9
+      marked: 4.2.4
+      minimatch: 5.1.0
+      shiki: 0.11.1
+    dev: true
 
   /typedoc/0.23.22_typescript@4.9.4:
     resolution: {integrity: sha512-5sJkjK60xp8A7YpcYniu3+Wf0QcgojEnhzHuCN+CkdpQkKRhOspon/9+sGTkGI8kjVkZs3KHrhltpQyVhRMVfw==}
