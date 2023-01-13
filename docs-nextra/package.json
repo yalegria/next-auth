@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "typedoc": "typedoc",
-    "dev": "npm run typedoc & next dev",
+    "dev": "TYPEDOC_WATCH=1 pnpm typedoc & next dev",
     "start": "next start",
     "build": "next build"
   },
@@ -16,10 +16,7 @@
     "next": "13.1.1",
     "nextra": "^2.2.1",
     "nextra-theme-docs": "^2.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
+    "remark-link-rewrite": "^1.0.6",
     "typedoc": "^0.23.22",
     "typedoc-plugin-markdown": "^3.14.0"
   }

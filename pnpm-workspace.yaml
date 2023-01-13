@@ -3,3 +3,4 @@ packages:
   - "apps/dev/*"
   - "apps/playgrounds/*"
   - "docs"
+  - "docs-nextra"
