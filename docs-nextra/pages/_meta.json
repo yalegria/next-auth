@@ -1,11 +1,13 @@
 {
   "docs": {
     "title": "Docs",
-    "type": "page"
+    "type": "page",
+    "href": "https://google.com"
   },
   "frameworks": {
     "title": "Frameworks",
-    "type": "page"
+    "type": "page",
+    "href": "https://react.org"
   },
   "index": {
     "title": "Home",

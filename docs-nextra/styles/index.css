@@ -2,3 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+div[dir="ltr"],
+#__next,
+body {
+  height: 100vh;
+  width: 100vw;
+
+  @apply dark:selection:bg-secondary dark:selection:text-white selection:bg-primary;
+}
+
+div[dir="ltr"] {
+  display: flex;
+  flex-direction: column;
+}
+
+div.nextra-nav-container ~ div {
+  flex-grow: 1;
+}
+
+div#reach-skip-nav ~ div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

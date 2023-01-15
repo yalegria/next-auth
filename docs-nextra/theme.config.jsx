@@ -1,12 +1,10 @@
+import Triangle from "./components/triangle.jsx"
+
 /** @type {import("nextra-theme-docs").DocsThemeConfig} */
 export default {
   logo: (
     <>
-      <img
-        height={28}
-        width={28}
-        src="https://authjs.dev/img/logo/logo-sm.png"
-      />
+      <Triangle className="h-8" />
       <span style={{ marginLeft: 8 }}>Auth.js</span>
     </>
   ),
