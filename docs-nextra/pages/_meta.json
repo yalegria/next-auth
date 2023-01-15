@@ -1,0 +1,21 @@
+{
+  "docs": {
+    "title": "Docs",
+    "type": "page"
+  },
+  "frameworks": {
+    "title": "Frameworks",
+    "type": "page"
+  },
+  "index": {
+    "title": "Home",
+    "theme": {
+      "sidebar": false,
+      "layout": "raw"
+    }
+  },
+  "getting-started": "Getting Started",
+  "guides": "Guides",
+  "reference": "Reference",
+  "concepts": "Concepts"
+}
