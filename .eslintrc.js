@@ -34,11 +34,11 @@ module.exports = {
       extends: ["plugin:jest/recommended"],
       env: { jest: true },
     },
-    {
-      files: ["docs/**"],
-      plugins: ["@docusaurus"],
-      extends: ["plugin:@docusaurus/recommended"],
-    },
+    // {
+    //   files: ["docs/**"],
+    //   plugins: ["@docusaurus"],
+    //   extends: ["plugin:@docusaurus/recommended"],
+    // },
     {
       // TODO: Expand to all packages
       files: ["packages/{core,sveltekit}/*.ts"],
