@@ -1,10 +1,20 @@
+<!-- <svg width="1405" height="1025" viewBox="0 0 1405 1025" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+<!-- <path d="M1180.05 977.4C483.802 708.04 103.247 143.506 0 -105.091L1102.61 -196C1418.53 307.367 1876.29 1246.76 1180.05 977.4Z" fill="url(#paint0_linear_228_83)" fill-opacity="0.44"/> -->
+<!-- <defs> -->
+<!-- <linearGradient id="paint0_linear_228_83" x1="185.171" y1="460.565" x2="641.405" y2="-62.9701" gradientUnits="userSpaceOnUse"> -->
+<!-- <stop stop-color="#BB44CC"/> -->
+<!-- <stop offset="1" stop-color="#BB44CC" stop-opacity="0"/> -->
+<!-- </linearGradient> -->
+<!-- </defs> -->
+<!-- </svg> -->
+
 <svg width="1405" height="1025" viewBox="0 0 1405 1025" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1180.05 977.4C483.802 708.04 103.247 143.506 0 -105.091L1102.61 -196C1418.53 307.367 1876.29 1246.76 1180.05 977.4Z" fill="url(#paint0_linear_228_83)" fill-opacity="0.44"/>
+<path d="M1180.05 977.4C483.802 708.04 103.247 143.506 0 -105.091L1102.61 -196C1418.53 307.367 1876.29 1246.76 1180.05 977.4Z" fill="url(#paint0_radial_228_83)"/>
 <defs>
-<linearGradient id="paint0_linear_228_83" x1="185.171" y1="460.565" x2="641.405" y2="-62.9701" gradientUnits="userSpaceOnUse">
+<radialGradient id="paint0_radial_228_83" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(498 619) rotate(-46.5881) scale(548.572 1194.34)">
 <stop stop-color="#BB44CC"/>
-<stop offset="1" stop-color="#BB44CC" stop-opacity="0"/>
-</linearGradient>
+<stop offset="1" stop-color="#111111"/>
+</radialGradient>
 </defs>
 </svg>
 
