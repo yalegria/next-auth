@@ -5,55 +5,52 @@ const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 export default function Marquee({ files }) {
   const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
     setWidth(window.innerWidth)
+    setHeight(window.innerHeight)
   }, [])
 
   if (width === 0) return
 
   return (
     <div className="absolute w-full h-full top-0 left-0 saturate-0 brightness-[1000] -z-20 opacity-5 overflow-hidden flex flex-col marquee-wrapper">
-      {files.slice(0, 20).map((name) => {
+      {files.map((name) => {
+        const offset = Math.random() * width
         return (
           <motion.div
+            key={name}
+            className="absolute"
+            initial={{ x: offset, y: height * Math.random() }}
             animate={{
               x: width,
+              // y: Math.cos(Math.random() * Math.PI) * 10, // TODO: circle animation
             }}
             transition={{
               repeat: Infinity,
-              duration: clamp(Math.random() * 200, 100, 200),
+              duration: Math.abs(clamp(Math.random() * 200, 100, 120) - (offset / width)), // TODO: reduce duration when offset is small(er)
               ease: "linear",
             }}
           >
-            <motion.div
-              key={name}
+            <motion.img
+              src={`/img/providers/${name}`}
+              alt={name}
               className="relative"
+              initial={{ opacity: 0, scale: 0.5 }}
+              height="64"
+              width="64"
               animate={{
-                x: (t) => 50 + Math.sin(t * 2 * Math.PI) * 50,
-                y: (t) => 50 + Math.cos(t * 2 * Math.PI) * 50,
+                opacity: 1,
+                scale: 1,
               }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <motion.img
-                src={`/img/providers/${name}`}
-                alt={name}
-                className="relative"
-                height="64"
-                width="64"
-                initial={{ x: Math.random() * width, opacity: 0, scale: 0.5 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  delay: Math.random(),
-                  duration: 1,
-                  type: "spring",
-                  stiffness: 150,
-                }}
-              />
-            </motion.div>
+              transition={{
+                delay: Math.random() * 10,
+                duration: 1,
+                type: "spring",
+                stiffness: 150,
+              }}
+            />
           </motion.div>
         )
       })}

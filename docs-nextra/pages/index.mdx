@@ -21,21 +21,42 @@ export default function Index({ files }) {
         </div>
         <div className="btns"></div>
       </div>
-      <Image
-        src={Blob1}
+      <svg 
         className="absolute top-0 left-0 -z-10 w-[50vw] lg:w-[40vw]"
-        alt="Blob1"
-      />
-      <Image
-        src={Blob2}
-        className="absolute top-0 right-0 -z-10 w-[60vw] lg:w-[40vw]"
-        alt="Blob1"
-      />
-      <Image
-        src={Blob3}
-        className="absolute bottom-32 lg:bottom-10 right-20 -z-10 w-[80vw] lg:w-full"
-        alt="Blob1"
-      />
+        width="1056" height="855" viewBox="0 0 1056 855" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M888.078 42.3027C465.467 1294.94 73.851 662.761 -266.667 854.807L-294.519 -12.0732C-119.086 -25.2807 234.783 -53.0438 246.789 -58.4364C261.797 -65.1771 1132.31 -620.045 1050.51 -275.273C1001.28 -160.866 980.447 -231.483 888.078 42.3027Z" fill="url(#paint0_radial_228_76)"/>
+      <defs>
+      <radialGradient id="paint0_radial_228_76" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(666.999 571.116) rotate(-129.513) scale(513.947 862.777)">
+      <stop stopColor="#FF4400"/>
+      <stop offset="1" stopColor="#111111"/>
+      </radialGradient>
+      </defs>
+      </svg>
+
+      <svg 
+              className="absolute -top-10 -right-16 -z-10 w-[65vw] lg:w-[45vw]"
+              width="1405" height="1025" viewBox="0 0 1405 1025" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1180.05 977.4C483.802 708.04 103.247 143.506 0 -105.091L1102.61 -196C1418.53 307.367 1876.29 1246.76 1180.05 977.4Z" fill="url(#paint0_radial_228_83)"/>
+      <defs>
+      <radialGradient id="paint0_radial_228_83" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(498 619) rotate(-46.5881) scale(548.572 1194.34)">
+      <stop stopColor="#BB44CC"/>
+      <stop offset="1" stopColor="#111111"/>
+      </radialGradient>
+      </defs>
+      </svg>
+
+      <svg 
+              className="absolute bottom-32 lg:bottom-10 right-20 -z-10 w-[80vw] lg:w-full"
+              width="2402" height="275" viewBox="0 0 2402 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M305.668 155.376C1150.52 -387.169 3270.85 708.01 2011.14 262.274L1847.48 804.627C1613.84 721.267 1142.31 553.804 1125.29 550.832C1104 547.117 -168.361 431.431 18.8067 264.119C109.949 220.108 121.011 273.958 305.668 155.376Z" fill="url(#paint0_radial_228_78)"/>
+      <defs>
+      <radialGradient id="paint0_radial_228_78" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(883.5 -66) rotate(93.0267) scale(757.557 879.417)">
+      <stop stopColor="#44BBCC"/>
+      <stop offset="1" stopColor="#111111"/>
+      </radialGradient>
+      </defs>
+      </svg>
+
       <Marquee className="absolute top-0 left-0 w-full h-full" files={files} />
     </div>
   )
