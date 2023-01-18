@@ -10,7 +10,7 @@ const providers = fs
   .map((p) => `${coreSrc}/providers/${p}`)
 
 /**
- * @type {import('typedoc').TypeDocOptions}
+ * @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').MarkdownTheme}
  */
 module.exports = {
   entryPoints: ["index.ts", "adapters.ts", "errors.ts", "jwt.ts", "types.ts"]
@@ -20,20 +20,21 @@ module.exports = {
   out: "pages/reference/core",
   tsconfig: "../packages/core/tsconfig.json",
   excludeNotDocumented: true,
-  allReflectionsHaveOwnDocument: true,
   plugin: ["typedoc-plugin-markdown", require.resolve("./typedoc-mdn-links")],
+  includeExtension: false,
+  symbolsWithOwnFile: "none",
+  fileStructure: "modules",
   hideInPageTOC: true,
   disableSources: true,
   hideBreadcrumbs: true,
   excludeExternals: true,
   excludeInternal: true,
   excludePrivate: true,
-  cleanOutputDir: true,
   excludeProtected: true,
+  cleanOutputDir: true,
   gitRevision: "main",
   githubPages: false,
   hideGenerator: true,
-  intentionallyNotExported: ["ReturnTypes", "CallbackParameters", "JsonValue"],
   readme: "none",
   sort: ["kind", "static-first", "required-first", "alphabetical"],
   kindSortOrder: [

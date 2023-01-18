@@ -118,7 +118,7 @@ export interface Account extends Partial<OpenIDTokenEndpointResponse> {
   type: ProviderType
 }
 
-/** The OAuth profile returned from your provider */
+/** The OAuth profile returned from your provider.. */
 export interface Profile {
   sub?: string
   name?: string
@@ -203,7 +203,7 @@ export interface CallbacksOptions<P = Profile, A = Account> {
    * Its content is forwarded to the `session` callback,
    * where you can control what should be returned to the client.
    * Anything else will be kept inaccessible from the client.
-   * 
+   *
    * Returning `null` will invalidate the JWT session by clearing
    * the user's cookies. You'll still have to monitor and invalidate
    * unexpired tokens from future requests yourself to prevent
@@ -220,7 +220,7 @@ export interface CallbacksOptions<P = Profile, A = Account> {
     account?: A | null
     profile?: P
     isNewUser?: boolean
-  }) => Awaitable<JWT|null>
+  }) => Awaitable<JWT | null>
 }
 
 /** [Documentation](https://authjs.dev/reference/configuration/auth-config#cookies) */
