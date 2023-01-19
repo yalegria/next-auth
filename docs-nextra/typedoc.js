@@ -21,7 +21,6 @@ module.exports = {
   tsconfig: "../packages/core/tsconfig.json",
   excludeNotDocumented: true,
   plugin: ["typedoc-plugin-markdown", require.resolve("./typedoc-mdn-links")],
-  includeExtension: false,
   symbolsWithOwnFile: "none",
   fileStructure: "modules",
   hideInPageTOC: true,

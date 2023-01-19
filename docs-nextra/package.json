@@ -15,11 +15,11 @@
   "dependencies": {
     "framer-motion": "^8.4.3",
     "next": "13.1.1",
-    "nextra": "2.2.3",
-    "nextra-theme-docs": "2.2.3",
+    "nextra": "^2.2.5",
+    "nextra-theme-docs": "^2.2.5",
     "remark-link-rewrite": "^1.0.6",
     "typedoc": "^0.23.24",
-    "typedoc-plugin-markdown": "https://gitpkg.now.sh/balazsorban44/typedoc-plugin-markdown/packages/typedoc-plugin-markdown?temp"
+    "typedoc-plugin-markdown": "https://gitpkg.now.sh/balazsorban44/typedoc-plugin-markdown/packages/typedoc-plugin-markdown?next"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

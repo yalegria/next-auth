@@ -1,0 +1,19 @@
+diff --git a/dist/chunk-7HTB3JLS.mjs b/dist/chunk-7HTB3JLS.mjs
+index 5969b90c3984f797338c900e16b70f403569732e..80b3cbf088d49ed07590fd68bd2d7ba82e8ac2cd 100644
+--- a/dist/chunk-7HTB3JLS.mjs
++++ b/dist/chunk-7HTB3JLS.mjs
+@@ -518,12 +518,13 @@ function compileMdx(_0) {
+     const structurizedData = /* @__PURE__ */ Object.create(null);
+     const {
+       jsx = false,
+-      format = "mdx",
+       outputFormat = "function-body",
++      format: _format = "mdx",
+       remarkPlugins = [],
+       rehypePlugins = [],
+       rehypePrettyCodeOptions
+     } = __spreadValues(__spreadValues({}, loaderOptions.mdxOptions), frontMatter.mdxOptions);
++    const format = _format === "detect" ? filePath.endsWith(".mdx") ? "mdx" : "md" : _format;
+     const compiler = useCachedCompiler && cachedCompilerForFormat[format] || (cachedCompilerForFormat[format] = createProcessor({
+       jsx,
+       format,
