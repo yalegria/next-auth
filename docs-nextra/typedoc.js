@@ -22,7 +22,7 @@ module.exports = {
   excludeNotDocumented: true,
   plugin: ["typedoc-plugin-markdown", require.resolve("./typedoc-mdn-links")],
   symbolsWithOwnFile: "none",
-  fileStructure: "modules",
+  hideHierarchy: true,
   hideInPageTOC: true,
   disableSources: true,
   hideBreadcrumbs: true,
