@@ -3,6 +3,8 @@ title: OAuth Provider Options
 sidebar_label: OAuth options
 ---
 
+import { Callout } from "nextra-theme-docs"
+
 ## Provider Options
 
 Whenever you configure a custom or a built-in OAuth provider, you have the following options available:
@@ -101,9 +103,10 @@ There are two ways to use this option:
    }
    ```
 
-:::tip
-If your Provider is OpenID Connect (OIDC) compliant, we recommend using the `wellKnown` option instead.
-:::
+<Callout>
+  If your Provider is OpenID Connect (OIDC) compliant, we recommend using the
+  `wellKnown` option instead.
+</Callout>
 
 ### `token` option
 
@@ -131,13 +134,16 @@ There are three ways to use this option:
    }
    ```
 
-:::warning
-Option 3. should not be necessary in most cases, but if your provider does not follow the spec, or you have some very unique constraints it can be useful. Try to avoid it, if possible.
-:::
+<Callout type="warning">
+  Option 3. should not be necessary in most cases, but if your provider does not
+  follow the spec, or you have some very unique constraints it can be useful.
+  Try to avoid it, if possible.
+</Callout>
 
-:::tip
-If your Provider is OpenID Connect (OIDC) compliant, we recommend using the `wellKnown` option instead.
-:::
+<Callout>
+  If your Provider is OpenID Connect (OIDC) compliant, we recommend using the
+  `wellKnown` option instead.
+</Callout>
 
 ### `userinfo` option
 
@@ -165,11 +171,13 @@ There are three ways to use this option:
    }
    ```
 
-:::warning
-Option 3. should not be necessary in most cases, but if your provider does not follow the spec, or you have some very unique constraints it can be useful. Try to avoid it, if possible.
-:::
+<Callout type="warning">
+  Option 3. should not be necessary in most cases, but if your provider does not
+  follow the spec, or you have some very unique constraints it can be useful.
+  Try to avoid it, if possible.
+</Callout>
 
-:::tip
+<Callout>
 In the rare case you don't care about what this endpoint returns, or your provider does not have one, you could create a noop function:
 
 ```js
@@ -178,11 +186,17 @@ userinfo: {
 }
 ```
 
-:::
+</Callout>
 
-:::tip
-If your Provider is OpenID Connect (OIDC) compliant, we recommend using the `wellKnown` option instead. OIDC usually returns an `id_token` from the `token` endpoint. `next-auth` can decode the `id_token` to get the user information, instead of making an additional request to the `userinfo` endpoint. Just set `idToken: true` at the top-level of your provider configuration. If not set, `next-auth` will still try to contact this endpoint.
-:::
+<Callout>
+  If your Provider is OpenID Connect (OIDC) compliant, we recommend using the
+  `wellKnown` option instead. OIDC usually returns an `id_token` from the
+  `token` endpoint. `next-auth` can decode the `id_token` to get the user
+  information, instead of making an additional request to the `userinfo`
+  endpoint. Just set `idToken: true` at the top-level of your provider
+  configuration. If not set, `next-auth` will still try to contact this
+  endpoint.
+</Callout>
 
 ### `client` option
 
