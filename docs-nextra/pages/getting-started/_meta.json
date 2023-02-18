@@ -1,0 +1,12 @@
+{
+  "credentials-tutorial": "Credentials Authentication",
+  "databases": "Databases",
+  "email-tutorial": "Email Authentication",
+  "introduction": "Introduction",
+  "oauth-tutorial": "OAuth Authentication",
+  "typescript": "Typescript",
+  "security": "Security",
+  "img": {
+    "display": "hidden"
+  }
+}

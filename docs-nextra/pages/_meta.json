@@ -2,12 +2,12 @@
   "docs": {
     "title": "Docs",
     "type": "page",
-    "href": "https://google.com"
+    "href": "/getting-started/introduction"
   },
   "frameworks": {
     "title": "Frameworks",
     "type": "page",
-    "href": "https://react.org"
+    "href": "/reference"
   },
   "index": {
     "title": "Home",
@@ -19,5 +19,14 @@
   "getting-started": "Getting Started",
   "guides": "Guides",
   "reference": "Reference",
-  "concepts": "Concepts"
+  "concepts": "Concepts",
+  "--": {
+    "type": "separator"
+  },
+  "contributors": "Contributors",
+  "github-link": {
+    "title": "Auth.js Repo",
+    "href": "https://github.com/nextauthjs/next-auth",
+    "newWindow": true
+  }
 }

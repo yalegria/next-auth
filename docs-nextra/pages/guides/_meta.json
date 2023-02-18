@@ -1,0 +1,13 @@
+{
+  "index": "Introduction",
+  "basics": "Basics",
+  "adapters": "Adapters",
+  "providers": "Providers",
+  "testing": "Testing",
+  "corporate-proxies": "Proxies",
+  "other": "Other",
+  "resources": "Community Resources",
+  "img": {
+    "display": "hidden"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "credentials-provider": "Credentials Provider",
+  "email-provider": "Email Provider",
+  "custom-provider": "Custom Provider"
+}

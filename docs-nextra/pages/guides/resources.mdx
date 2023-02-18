@@ -1,0 +1,122 @@
+---
+title: Community Resources
+---
+
+import { Callout } from "nextra-theme-docs"
+import Image from "next/image"
+
+<Callout type="info">
+  These tutorials are contributed by the community. **New submissions and edits
+  are welcome!**
+</Callout>
+
+## Basics
+
+#### [Introduction to Auth.js](https://www.youtube.com/watch?v=npZsJxWntJM) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/youtube.svg" alt="YouTube Logo" />
+
+- This is an introductory video to Auth.js for beginners. In this video, it is explained how to set up authentication in a few easy steps and add different configurations to make it more robust and secure.
+
+#### [Authentication patterns for Next.js](https://nextjs.org/docs/authentication) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Next.js supports multiple patterns for authentication, each designed for different use cases. This guide will allow you to choose your adventure based on your constraints. By Lee Robinson.
+
+#### [Adding Authentication to an existing Next.js Application in no time!](https://dev.to/ndom91/adding-authentication-to-an-existing-serverless-next-js-app-in-no-time-with-nextauth-js-192h) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/devto.svg" alt="Dev.to Logo" />
+
+- This tutorial walks one through adding Auth.js to an existing project. Including setting up the OAuth client id and secret, adding the API routes for authentication, protecting pages and API routes behind that authentication, etc.
+
+#### [Adding social authentication support to a Next.js app](https://getstarted.sh/bulletproof-next/add-social-authentication) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- A tutorial by Arunoda Susirpiala. Checkout [GetStarted](https://getstarted.sh/) for more examples.
+
+#### [How to Authenticate Next.js Apps with Twitter & Auth.js](https://spacejelly.dev/posts/how-to-authenticate-next-js-apps-with-twitter-nextauth-js/) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Learn how to add Twitter authentication and login to a Next.js app both client-side and server-side with Auth.js.
+
+#### [NextJS Authentication Crash Course with Auth.js](https://youtu.be/o_wZIVmWteQ) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/youtube.svg" alt="YouTube Logo" />
+
+- This tutorial dives into the ins and outs of NextAuth, including using the Email, Github, Twitter and Auth0 providers in under an hour.
+
+#### [Create your own Auth.js Login Pages](https://youtu.be/kB6YNYZ63fw) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/youtube.svg" alt="YouTube Logo" />
+
+- This tutorial shows you how to jump in and create your own custom login pages versus using the ones provided by Auth.js
+
+#### [Passwordless Authentication with next-auth](https://www.youtube.com/watch?v=GPBD3acOx_M) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/youtube.svg" alt="YouTube Logo" />
+
+- A video tutorial by Xiaoru Li from Prisma.
+
+#### [How to authenticate Next.js Apps with Sign-In With Ethereum (SIWE) & Auth.js](https://docs.login.xyz/integrations/Auth.js) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Learn how to use Sign-In With Ethereum to authenticate your users with their existing Ethereum wallets - identifiers they personally control.
+- Example application: [`spruceid/siwe-next-auth-example`](https://github.com/spruceid/siwe-next-auth-example)
+
+#### [Next.js Authentication with Okta and Auth.js 4.0](https://thetombomb.com/posts/nextjs-nextauth-okta) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Learn how to perform authentication with an OIDC Application in Okta and Auth.js.
+
+## Fullstack
+
+#### [Build a FullStack App with Next.js, Auth.js, Supabase & Prisma](https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-242389284337222224) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+In this [free course](https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-242389284337222224), you'll learn how to build a full-stack app using the following technologies:
+
+- **Next.js** - The React framework for building the UI of the app and the REST API
+- **Auth.js** - For implementing passwordless and OAuth authentication
+- **Supabase** - For persisting the app data into a PostgreSQL database and storing media files
+- **Prisma** - For making it easy to read and write data from our app from and to the database
+
+The app that we'll work on in this course is called **_SupaVacation_**. It is an online marketplace for vacation rentals where users can browse through all the properties for rent, bookmark their favorite ones, and even rent their own properties.
+
+> Here's [a live demo](https://supa-vacation.vercel.app/) of the app's final version. It is what your app should look likes after completing this course. Feel free to play with it to get an overview of all the features you'll be working on.
+
+#### [Magic Link Authentication in Next.js with NextAuth and Fauna](https://alterclass.io/tutorials/magic-link-authentication-in-nextjs-with-nextauth-and-fauna) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+Learn how to implement passwordless/magic link authentication with database storage in your Next.js projects using NextAuth and Fauna DB.
+
+> The final version of the project's code can be found on [Github](https://github.com/AlterClassIO/magic-next-auth). You can use it as a starting point for any Next.js app that requires passwordless authentication.
+
+This tutorial covers:
+
+- Configuring Next.js, Auth.js, and Fauna to work together seamlessly
+- Using Next.js dynamic API routes to handle authentication requests
+- Using Fauna and the Fauna Adapter for `next-auth` to persist users, email sign in tokens, and sessions
+- Creating custom login and confirmation pages with React + Tailwind CSS
+- Customizing the sign-in email and sending a welcome email to new users
+
+> You can also preview the example live [here](https://magic-next-auth.vercel.app/).
+
+#### [Passwordless Authentication with Next.js, Prisma, and next-auth](https://dev.to/prisma/passwordless-authentication-with-next-js-prisma-and-next-auth-5g8g) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/devto.svg" alt="Dev.to Logo" />
+
+- In this post, you'll learn how to add passwordless authentication to your Next.js app using Prisma and next-auth. By the end of this tutorial, your users will be able to log in to your app with either their GitHub account or a Slack-styled magic link sent right to their Email inbox. By Xiaoru Li.
+
+#### [Fullstack Authentication Example with Next.js and Auth.js](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nextjs-api-routes-auth) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- This example shows how to implement a full-stack app in TypeScript with Next.js using Prisma Client as a backend. It also demonstrates how to implement authentication using Auth.js. By Nikolas Burk at Prisma.
+
+## Advanced
+
+#### [Add auth support to a Next.js app with a custom backend](https://arunoda.me/blog/add-auth-support-to-a-next-js-app-with-a-custom-backend) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- A tutorial by Arunoda Susirpiala.
+
+#### [How to Configure Azure AD B2C Authentication with Next.js](https://benjaminwfox.com/blog/tech/how-to-configure-azure-b2c-with-nextjs) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Configuring authentication with Azure B2C in Next.js is not a particularly straight forward process. We'll look at how to facilitate this using the Auth.js library. By Ben Fox.
+
+#### [Sign in with Apple in NextJS](https://thesiddd.com/blog/apple-auth) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- This tutorial walks step by step on how to get sign in with Apple working (both locally and on a deployed website) using Auth.js.
+
+#### [Using Auth.js with Magic links](https://dev.to/narciero/using-nextauth-js-with-magic-links-df4) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/devto.svg" alt="Dev.to Logo" />
+
+- Learn how to use [Magic.Link](https://magic.link) authentication with [Auth.js](https://authjs.dev) to enable passwordless authentication without a database.
+
+## Database
+
+#### [Create a Auth.js Custom Adapter with HarperDB & Next.js](https://spacejelly.dev/posts/how-to-create-a-nextauth-js-custom-adapter-with-harperdb-next-js/) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- Use a custom database in a Custom Adapter for persisted Auth.js sessions using HarperDB as an example.
+- Video tutorial also available: [https://www.youtube.com/watch?v=pu7xBv7sZ8s](https://www.youtube.com/watch?v=pu7xBv7sZ8s)
+
+#### [Using Auth.js with Prisma and PlanetScale serverless databases](https://github.com/planetscale/nextjs-planetscale-starter) <Image style={{ marginLeft: '0.5rem', display: 'inline' }} width={24} height={24} src="/img/external.svg" alt="External" />
+
+- How to set up a PlanetScale database to fetch and store user / account data with the Prisma adapter.

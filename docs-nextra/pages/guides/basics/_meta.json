@@ -1,0 +1,11 @@
+{
+  "initialization": "Initialization",
+  "callbacks": "Callbacks",
+  "events": "Events",
+  "pages": "Pages",
+  "securing-pages-and-api-routes": "Securing Pages and API Routes",
+  "overriding-jwt": "Overriding JWT",
+  "refresh-token-rotation": "Refresh Token Rotation",
+  "role-based-login-strategy": "Role-Based Access Control",
+  "deployment": "Deployment"
+}

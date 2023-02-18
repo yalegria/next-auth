@@ -2,6 +2,9 @@
 title: Email authentication
 ---
 
+import { Callout } from "nextra-theme-docs"
+import Image from "next/image"
+
 import smtpConfig from "./img/dashboard-smtp.png"
 import startPageImg from "./img/email-tutorial-start.png"
 import checkPageImg from "./img/email-tutorial-check.png"
@@ -18,9 +21,12 @@ The Email provider can be used in conjunction with (or instead of) one or more O
 
 On initial sign in, a **Verification Token** is sent to the email address provided. By default this token **is valid for 24 hours**. If the Verification Token is used within that time (i.e. by clicking on the link in the email) an account is created for the user and they are signed in.
 
-:::tip
-The Email Provider can be used with both JSON Web Tokens and database sessions, but you [must configure a database adapter](/guides/adapters/using-a-database-adapter) to use it. It is not possible to enable email sign in without using a database.
-:::
+<Callout>
+  The Email Provider can be used with both JSON Web Tokens and database
+  sessions, but you [must configure a database
+  adapter](/guides/adapters/using-a-database-adapter) to use it. It is not
+  possible to enable email sign in without using a database.
+</Callout>
 
 ## 1. Installing `nodemailer`
 
@@ -36,13 +42,14 @@ npm install -D nodemailer
 
 Next we need a [SMTP service](https://sendgrid.com/blog/what-is-an-smtp-server/) which will be in charge of sending emails from our application. There's a number of services available for this, however [here are the ones](http://nodemailer.com/smtp/well-known/) known to work with `nodemailer`.
 
-:::info
-For this tutorial, we're going to be using [Sendgrid](https://sendgrid.com/), but any of the services linked above should work the same
-:::
+<Callout>
+  For this tutorial, we're going to be using [Sendgrid](https://sendgrid.com/),
+  but any of the services linked above should work the same
+</Callout>
 
 First create an account in and then login to the dashboard, then navigate to "Settings → API Keys" and create an API key:
 
-<img src={smtpConfig} />
+<Image src={smtpConfig} />
 
 Next paste the API in your terminal as so, and run the command:
 
@@ -172,30 +179,34 @@ Let's start by running a Next.js application with NextAuth, making sure the **Em
 
 For this tutorial we're going to be using NextAuth example app. Launch the app and click on "Sign in", we're redirected to the Sign In page:
 
-<img src={startPageImg} alt="Screenshot of sign in page" />
+<Image src={startPageImg} alt="Screenshot of sign in page" />
 
-:::info
-You can customize the look and feel of your Sign in page pretty easily with NextAuth. Refer to our [pages guide](/guides/basics/pages) for that!
-:::
+<Callout>
+  You can customize the look and feel of your Sign in page pretty easily with
+  NextAuth. Refer to our [pages guide](/guides/basics/pages) for that!
+</Callout>
 
 Then we insert the email address we want to log-in with in the Email credentials section and click on "Sign in with Email".
 
 NextAuth will then display another page hinting the user to check their email:
 
-<img src={checkPageImg} alt="Screenshot of check email page" />
+<Image src={checkPageImg} alt="Screenshot of check email page" />
 
 Let's now check our email, and look for one sent from NextAuth (check your spam folder just in case):
 
-<img src={mailboxImg} alt="Screenshot of mailbox" />
+<Image src={mailboxImg} alt="Screenshot of mailbox" />
 
 Nice! We got one, coming from the sender specified in the `EMAIL_FROM` environment variable from our configuration above and that's is the sender we verified in Sengrid.
 
 Click on "Sign in" and a new browser tab will open, you should then land on your application as authenticated!
 
-<img src={loggedInImg} alt="Screenshot of logged in" />
+<Image src={loggedInImg} alt="Screenshot of logged in" />
 
 Easy right? We had to configure Sendgrid and install a database adapter so the user sessions can be saved somewhere, but once done NextAuth will deal with all the user session management for us in a secure way!
 
-:::info
-A user account (i.e. an entry in the Users table) will not be created for the user until the first time they verify their email address. If an email address is already associated with an account, the user will be signed in to that account when they use the link in the email.
-:::
+<Callout>
+  A user account (i.e. an entry in the Users table) will not be created for the
+  user until the first time they verify their email address. If an email address
+  is already associated with an account, the user will be signed in to that
+  account when they use the link in the email.
+</Callout>
