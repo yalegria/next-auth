@@ -1,0 +1,15 @@
+{
+  "basic": {
+    "title": "Basic Usage",
+    "theme": {
+      "layout": "full",
+      "sidebar": false,
+      "breadcrumb": false,
+      "pagination": false,
+      "timestamp": false,
+      "toc": false,
+      "typesetting": "article",
+      "footer": false
+    }
+  }
+}

@@ -9,6 +9,14 @@
     "type": "page",
     "href": "/reference"
   },
+  "examples": {
+    "type": "page",
+    "title": "Playground",
+    "theme": {
+      "layout": "full",
+      "sidebar": false
+    }
+  },
   "index": {
     "title": "Home",
     "type": "page",
