@@ -20,6 +20,7 @@ div[dir="ltr"] {
 
 div.nextra-nav-container ~ div {
   flex-grow: 1;
+  width: 100%;
 }
 
 div#reach-skip-nav ~ div {
