@@ -11,8 +11,11 @@
   },
   "index": {
     "title": "Home",
+    "type": "page",
+    "display": "hidden",
     "theme": {
       "sidebar": false,
+      "footer": false,
       "layout": "raw"
     }
   },
@@ -28,5 +31,19 @@
     "title": "Auth.js Repo",
     "href": "https://github.com/nextauthjs/next-auth",
     "newWindow": true
+  },
+   "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "500": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
   }
 }
