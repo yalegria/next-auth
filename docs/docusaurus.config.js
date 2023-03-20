@@ -1,3 +1,5 @@
+// @ts-check
+
 const fs = require("fs")
 const path = require("path")
 
@@ -9,7 +11,28 @@ const providers = fs
   .map((p) => `${coreSrc}/providers/${p}`)
 
 const typedocConfig = require("./typedoc.json")
+// @ts-expect-error
 delete typedocConfig.$schema
+
+/**
+ * @param {string} name
+ * @returns Record<string, any>
+ */
+function createTypeDocAdapterConfig(name) {
+  const slug = name.toLowerCase().replace(" ", "-")
+
+  return {
+    id: slug,
+    plugin: [require.resolve("./typedoc-mdn-links")],
+    watch: process.env.TYPEDOC_WATCH,
+    entryPoints: [`../packages/adapter-${slug}/src/index.ts`],
+    tsconfig: `../packages/adapter-${slug}/tsconfig.json`,
+    out: `reference/adapter/${slug}`,
+    sidebar: {
+      indexLabel: name,
+    },
+  }
+}
 
 /** @type {import("@docusaurus/types").Config} */
 const docusaurusConfig = {
@@ -62,7 +85,7 @@ const docusaurusConfig = {
           position: "left",
         },
         {
-          to: "/reference/core/modules/main",
+          to: "/reference/core",
           // TODO: change to this when the overview page looks better.
           // to: "/reference",
           activeBasePath: "/reference",
@@ -101,7 +124,7 @@ const docusaurusConfig = {
     announcementBar: {
       id: "new-major-announcement",
       content:
-        "<a target='_blank' rel='noopener noreferrer' href='https://next-auth.js.org'>NextAuth.js</a> is becoming Auth.js! 🎉 We're creating Authentication for the Web. Everyone included. Starting with SvelteKit, check out <a href='/reference/sveltekit'>the docs</a>.",
+        "<a target='_blank' rel='noopener noreferrer' href='https://next-auth.js.org'>NextAuth.js</a> is becoming Auth.js! 🎉 We're creating Authentication for the Web. Everyone included. Starting with SvelteKit, check out <a href='/reference/sveltekit'>the docs</a>. Note, this site is under active development.",
       backgroundColor: "#000",
       textColor: "#fff",
     },
@@ -182,10 +205,7 @@ const docusaurusConfig = {
           lastVersion: "current",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          remarkPlugins: [
-            require("@sapphire/docusaurus-plugin-npm2yarn2pnpm").npm2yarn2pnpm,
-            require("remark-github"),
-          ],
+          remarkPlugins: [require("@sapphire/docusaurus-plugin-npm2yarn2pnpm").npm2yarn2pnpm],
           versions: {
             current: {
               label: "experimental",
@@ -204,20 +224,14 @@ const docusaurusConfig = {
       {
         ...typedocConfig,
         id: "core",
-        plugin: ["./tyepdoc"],
-        entryPoints: [
-          "index.ts",
-          "adapters.ts",
-          "errors.ts",
-          "jwt.ts",
-          "types.ts",
-        ]
-          .map((e) => `${coreSrc}/${e}`)
-          .concat(providers),
-        tsconfig: "../packages/core/tsconfig.json",
-        out: "reference/03-core",
+        plugin: [require.resolve("./typedoc-mdn-links")],
         watch: process.env.TYPEDOC_WATCH,
-        includeExtension: false,
+        entryPoints: ["index.ts", "adapters.ts", "errors.ts", "jwt.ts", "types.ts"].map((e) => `${coreSrc}/${e}`).concat(providers),
+        tsconfig: "../packages/core/tsconfig.json",
+        out: "reference/core",
+        sidebar: {
+          indexLabel: "index",
+        },
       },
     ],
     [
@@ -225,14 +239,78 @@ const docusaurusConfig = {
       {
         ...typedocConfig,
         id: "sveltekit",
-        plugin: ["./tyepdoc"],
-        entryPoints: ["index.ts", "client.ts"].map(
-          (e) => `../packages/frameworks-sveltekit/src/lib/${e}`
-        ),
-        tsconfig: "../packages/frameworks-sveltekit/tsconfig.json",
-        out: "reference/04-sveltekit",
+        plugin: [require.resolve("./typedoc-mdn-links")],
         watch: process.env.TYPEDOC_WATCH,
-        includeExtension: false,
+        entryPoints: ["index.ts", "client.ts"].map((e) => `../packages/frameworks-sveltekit/src/lib/${e}`),
+        tsconfig: "../packages/frameworks-sveltekit/tsconfig.json",
+        out: "reference/sveltekit",
+        sidebar: {
+          indexLabel: "index",
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("Firebase"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("Dgraph"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("Prisma"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("Fauna"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        id: "typeorm",
+        plugin: [require.resolve("./typedoc-mdn-links")],
+        watch: process.env.TYPEDOC_WATCH,
+        entryPoints: [`../packages/adapter-typeorm-legacy/src/index.ts`],
+        tsconfig: `../packages/adapter-typeorm-legacy/tsconfig.json`,
+        out: `reference/adapter/typeorm`,
+        sidebar: {
+          indexLabel: "TypeORM",
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("DynamoDB"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("MongoDB"),
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        ...typedocConfig,
+        ...createTypeDocAdapterConfig("PouchDB"),
       },
     ],
   ],

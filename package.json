@@ -7,7 +7,7 @@
     "build:app": "turbo run build --filter=next-auth-app",
     "build:docs": "turbo run build --filter=docs",
     "build": "turbo run build --filter=next-auth --filter=@next-auth/* --filter=@auth/* --no-deps",
-    "test": "turbo run test --concurrency=1 --filter=[HEAD^1] --filter=./packages/* --filter=!*pouchdb-* --filter=!@*upstash* --filter=!*dynamodb-*",
+    "test": "turbo run test --concurrency=1 --filter=[HEAD^1] --filter=./packages/* --filter=!@*upstash* --filter=!*dynamodb-*",
     "clean": "turbo run clean --no-cache",
     "dev:db": "turbo run dev --parallel --continue --filter=next-auth-app...",
     "dev": "turbo run dev --parallel --continue --filter=next-auth-app... --filter=!./packages/adapter-*",
@@ -19,7 +19,8 @@
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "release": "release",
-    "version:pr": "node ./config/version-pr"
+    "version:pr": "node ./config/version-pr",
+    "e2e": "turbo run e2e --filter=next-auth-app"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
@@ -58,12 +59,8 @@
     }
   ],
   "pnpm": {
-    "overrides": {
-      "undici": "5.11.0"
-    },
     "patchedDependencies": {
-      "@balazsorban/monorepo-release@0.1.8": "patches/@balazsorban__monorepo-release@0.1.8.patch",
-      "nextra@2.2.5": "patches/nextra@2.2.5.patch"
+      "@balazsorban/monorepo-release@0.1.8": "patches/@balazsorban__monorepo-release@0.1.8.patch"
     }
   }
 }
