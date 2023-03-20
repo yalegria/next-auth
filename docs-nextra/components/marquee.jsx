@@ -27,6 +27,7 @@ function MarqueeItem({ name, width, height }) {
   const [y] = useState(height * Math.random())
   const [reset, setReset] = useState(false)
   const [duration] = useState(clamp(Math.random() * 25, 20, 25))
+  const offset = Math.random() * width
   useEffect(() => {
     const timeout =
       setTimeout(() => {
@@ -34,7 +35,6 @@ function MarqueeItem({ name, width, height }) {
       }, (1000 * (width - offset)) / duration) - 2000
     return () => clearTimeout(timeout)
   }, [duration, width, offset])
-  const offset = Math.random() * width
   return (
     <motion.span
       key={name + reset}
