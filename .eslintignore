@@ -27,6 +27,9 @@ docs/docs/reference/core
 docs/docs/reference/sveltekit
 static
 
+#  TODO: Enable
+docs-nextra
+
 # --------------- Packages ---------------
 
 coverage

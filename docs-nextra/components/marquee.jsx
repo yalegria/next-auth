@@ -33,7 +33,7 @@ function MarqueeItem({ name, width, height }) {
         setReset(true)
       }, (1000 * (width - offset)) / duration) - 2000
     return () => clearTimeout(timeout)
-  }, [duration, width])
+  }, [duration, width, offset])
   const offset = Math.random() * width
   return (
     <motion.span
