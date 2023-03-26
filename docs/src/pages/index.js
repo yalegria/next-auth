@@ -154,7 +154,7 @@ export default function Home() {
                   )}
                   href="https://sveltekit-auth-example.vercel.app"
                 >
-                  <img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" height="48" width="48" />
+                  <img src="/img/framework-sveltekit.svg" height="48" width="48" />
                 </a>
                 <a
                   className={classnames(
@@ -163,7 +163,7 @@ export default function Home() {
                   )}
                   href="https://auth-solid.vercel.app"
                 >
-                  <img src="https://start.solidjs.com/logo.svg" height="48" width="48" />
+                  <img src="/img/framework-solidstart.svg" height="48" width="48" />
                 </a>
               </div>
             </div>
