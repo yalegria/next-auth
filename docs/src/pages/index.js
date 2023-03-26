@@ -128,6 +128,16 @@ export default function Home() {
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
               </div>
               <div className={styles.buttons}>
+                <Link
+                  className={classnames(
+                    "button button--primary button--lg rounded-pill button-start",
+                    styles.button,
+                    styles.buttonStart
+                  )}
+                  to={useBaseUrl("/getting-started/introduction")}
+                >
+                  Get Started
+                </Link>
                 <a
                   className={classnames(
                     "button button--outline button--secondary button--lg rounded-pill",
@@ -135,7 +145,7 @@ export default function Home() {
                   )}
                   href="https://next-auth-example.vercel.app"
                 >
-                  Live Demo (Next.js)
+                  <img src="/img/framework-nextjs-white.svg" height="48" width="48" />
                 </a>
                 <a
                   className={classnames(
@@ -144,7 +154,7 @@ export default function Home() {
                   )}
                   href="https://sveltekit-auth-example.vercel.app"
                 >
-                  Live Demo (SvelteKit)
+                  <img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" height="48" width="48" />
                 </a>
                 <a
                   className={classnames(
@@ -153,17 +163,8 @@ export default function Home() {
                   )}
                   href="https://auth-solid.vercel.app"
                 >
-                  Live Demo (SolidStart)
+                  <img src="https://start.solidjs.com/logo.svg" height="48" width="48" />
                 </a>
-                <Link
-                  className={classnames(
-                    "button button--primary button--lg rounded-pill",
-                    styles.button
-                  )}
-                  to={useBaseUrl("/getting-started/introduction")}
-                >
-                  Get Started
-                </Link>
               </div>
             </div>
             <div className="hero-marquee">
