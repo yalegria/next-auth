@@ -2,7 +2,7 @@
 adapters: ["packages/core/src/adapters.ts", "packages/adapter-*/**/*"]
 core: ["packages/core/src/**/*"]
 dgraph: ["packages/adapter-dgraph/**/*"]
-documentation: ["packages/docs/docs/**/*"]
+documentation: ["packages/docs/pages/**/*"]
 dynamodb: ["packages/adapter-dynamodb/**/*"]
 examples: ["apps/examples/**/*"]
 fauna: ["packages/adapter-fauna/**/*"]

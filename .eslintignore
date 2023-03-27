@@ -23,8 +23,9 @@ pnpm-lock.yaml
 
 .docusaurus
 build
-docs/docs/reference/core
-docs/docs/reference/sveltekit
+docs/pages/reference/core
+docs/pages/reference/sveltekit
+docs/pages/reference/adapter
 static
 
 #  TODO: Enable

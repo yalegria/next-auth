@@ -13,16 +13,14 @@ pnpm-lock.yaml
 *.d.ts.map
 
 .svelte-kit
-.next
 .nuxt
 
 # --------------- Docs ---------------
 
-.docusaurus
-build
-docs/docs/reference/core
-docs/docs/reference/sveltekit
-static
+.next
+docs/pages/reference/core
+docs/pages/reference/sveltekit
+docs/pages/reference/adapter
 docs/providers.json
 
 # --------------- Packages ---------------

@@ -2,7 +2,7 @@ import { join } from "path"
 import { readdirSync, readFileSync, writeFileSync } from "fs"
 
 // TODO: generate from core package
-const providersPath = join(process.cwd(), "/docs/reference/05-oauth-providers")
+const providersPath = join(process.cwd(), "/pages/docs/reference/05-oauth-providers")
 
 const files = readdirSync(providersPath, "utf8")
 

@@ -82,9 +82,7 @@ packages/core/src/providers/oauth-types.ts
 packages/core/lib
 packages/core/providers
 packages/core/src/lib/pages/styles.ts
-docs-nextra/pages/reference/core
-docs/docs/reference/core
-docs/docs/reference/sveltekit
+docs/pages/reference/core
 
 
 # SvelteKit
@@ -94,7 +92,8 @@ packages/frameworks-sveltekit/.svelte-kit
 packages/frameworks-sveltekit/package
 packages/frameworks-sveltekit/vite.config.js.timestamp-*
 packages/frameworks-sveltekit/vite.config.ts.timestamp-*
+docs/pages/reference/sveltekit
 
 # Adapters
 
-docs/docs/reference/adapter
+docs/pages/reference/adapter
